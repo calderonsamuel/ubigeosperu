@@ -1,3 +1,7 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
+^ubigeosperu\.Rcheck$
+^ubigeosperu.*\.tar\.gz$
+^ubigeosperu.*\.tgz$
+^README\.Rmd$
