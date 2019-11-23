@@ -1,6 +1,6 @@
 Package: ubigeosperu
 Type: Package
-Title: Fins a Peruvian Ubigeo
+Title: Find a Peruvian Ubigeo
 Version: 0.0.0.9000
 Authors@R: 
     person("Samuel", "Calderon", email = "samuel.calderon@uarm.pe", role = c("aut", "cre"))
