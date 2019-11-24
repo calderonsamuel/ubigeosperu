@@ -14,4 +14,7 @@ ubigeos
 \description{
 A dataset containing three peruvian ubigeos clasification from INEI, RENIEC and SUNAT.
 }
+\seealso{
+\code{\link{ubigeos_tidy}} for a tidy version of this dataset.
+}
 \keyword{datasets}

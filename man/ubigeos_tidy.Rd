@@ -12,7 +12,10 @@
 ubigeos_tidy
 }
 \description{
-This is the tidy version of the ubigeos dataset. A dataset containing three
+This is the tidy version of the \code{\link{ubigeos}} dataset. A dataset containing three
 peruvian ubigeos clasification from INEI, RENIEC and SUNAT.
+}
+\seealso{
+\code{\link{ubigeos}} for the original CONCYTEC dataset.
 }
 \keyword{datasets}

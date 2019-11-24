@@ -1,7 +1,7 @@
 Package: ubigeosperu
 Type: Package
 Title: Find a Peruvian Ubigeo
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R: 
     person("Samuel", "Calderon", email = "samuel.calderon@uarm.pe", role = c("aut", "cre"))
 Description: A tool to find the peruvian ubigeos for a location. It has three levels: 
