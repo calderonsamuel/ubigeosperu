@@ -38,6 +38,7 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(ubigeosperu)
+library(dplyr)
 
 ## ubigeosperu contains a single dataframe object containing the peruvian ubigeos codes.
 
@@ -45,17 +46,34 @@ library(ubigeosperu)
 dim(ubigeos)
 #> [1] 1876   18
 
-## This code gives you the first ten rows of the first 4 columns of the dataframe
-ubigeos[1:10,1:4]
-#>    cod_dep_inei desc_dep_inei cod_prov_inei desc_prov_inei
-#> 1            01      AMAZONAS          0101    CHACHAPOYAS
-#> 2            01      AMAZONAS          0101    CHACHAPOYAS
-#> 3            01      AMAZONAS          0101    CHACHAPOYAS
-#> 4            01      AMAZONAS          0101    CHACHAPOYAS
-#> 5            01      AMAZONAS          0101    CHACHAPOYAS
-#> 6            01      AMAZONAS          0101    CHACHAPOYAS
-#> 7            01      AMAZONAS          0101    CHACHAPOYAS
-#> 8            01      AMAZONAS          0101    CHACHAPOYAS
-#> 9            01      AMAZONAS          0101    CHACHAPOYAS
-#> 10           01      AMAZONAS          0101    CHACHAPOYAS
+## The ubigeos dataset is a tibble
+ubigeos
+#> # A tibble: 1,876 x 18
+#>    cod_dep_inei desc_dep_inei cod_prov_inei desc_prov_inei cod_ubigeo_inei
+#>    <chr>        <chr>         <chr>         <chr>          <chr>          
+#>  1 01           AMAZONAS      0101          CHACHAPOYAS    010101         
+#>  2 01           AMAZONAS      0101          CHACHAPOYAS    010102         
+#>  3 01           AMAZONAS      0101          CHACHAPOYAS    010103         
+#>  4 01           AMAZONAS      0101          CHACHAPOYAS    010104         
+#>  5 01           AMAZONAS      0101          CHACHAPOYAS    010105         
+#>  6 01           AMAZONAS      0101          CHACHAPOYAS    010106         
+#>  7 01           AMAZONAS      0101          CHACHAPOYAS    010107         
+#>  8 01           AMAZONAS      0101          CHACHAPOYAS    010108         
+#>  9 01           AMAZONAS      0101          CHACHAPOYAS    010109         
+#> 10 01           AMAZONAS      0101          CHACHAPOYAS    010110         
+#> # … with 1,866 more rows, and 13 more variables: desc_ubigeo_inei <chr>,
+#> #   cod_dep_reniec <chr>, desc_dep_reniec <chr>, cod_prov_reniec <chr>,
+#> #   desc_prov_reniec <chr>, cod_ubigeo_reniec <chr>, desc_ubigeo_reniec <chr>,
+#> #   cod_dep_sunat <chr>, desc_dep_sunat <chr>, cod_prov_sunat <chr>,
+#> #   desc_prov_sunat <chr>, cod_ubigeo_sunat <chr>, desc_ubigeo_sunat <chr>
+
+## You can access the tidy version and pipe it!
+ubigeos_tidy %>%
+    filter(lugar == "CHORRILLOS", nivel == "Distrito")
+#> # A tibble: 3 x 4
+#>   lugar      nivel    entidad ubigeo
+#>   <chr>      <chr>    <chr>   <chr> 
+#> 1 CHORRILLOS Distrito INEI    150108
+#> 2 CHORRILLOS Distrito RENIEC  140108
+#> 3 CHORRILLOS Distrito SUNAT   150108
 ```
