@@ -39,14 +39,19 @@ This is a basic example which shows you how to solve a common problem:
 ``` r
 library(ubigeosperu)
 library(dplyr)
+```
 
-## ubigeosperu contains a single dataframe object containing the peruvian ubigeos codes.
+ubigeosperu contains a single dataframe object containing the peruvian
+ubigeos codes.
 
-## This are the dimentions of the dataframe
+``` r
 dim(ubigeos)
 #> [1] 1876   18
+```
 
-## The ubigeos dataset is a tibble
+The ubigeos dataset is a tibble.
+
+``` r
 ubigeos
 #> # A tibble: 1,876 x 18
 #>    cod_dep_inei desc_dep_inei cod_prov_inei desc_prov_inei cod_ubigeo_inei
@@ -66,8 +71,11 @@ ubigeos
 #> #   desc_prov_reniec <chr>, cod_ubigeo_reniec <chr>, desc_ubigeo_reniec <chr>,
 #> #   cod_dep_sunat <chr>, desc_dep_sunat <chr>, cod_prov_sunat <chr>,
 #> #   desc_prov_sunat <chr>, cod_ubigeo_sunat <chr>, desc_ubigeo_sunat <chr>
+```
 
-## You can access the tidy version and pipe it!
+You can access the tidy version and pipe it\!
+
+``` r
 ubigeos_tidy %>%
     filter(lugar == "CHORRILLOS", nivel == "Distrito")
 #> # A tibble: 3 x 4

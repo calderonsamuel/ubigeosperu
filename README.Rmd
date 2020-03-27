@@ -41,19 +41,27 @@ devtools::install_github("calderonsamuel/ubigeosperu")
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r example, message=FALSE}
+```{r library, message=FALSE}
 library(ubigeosperu)
 library(dplyr)
+```
 
-## ubigeosperu contains a single dataframe object containing the peruvian ubigeos codes.
+ubigeosperu contains a single dataframe object containing the peruvian ubigeos codes.
 
-## This are the dimentions of the dataframe
+
+```{r dim, message=FALSE}
 dim(ubigeos)
+```
 
-## The ubigeos dataset is a tibble
+The ubigeos dataset is a tibble.
+
+```{r tibble, message=FALSE}
 ubigeos
+```
 
-## You can access the tidy version and pipe it!
+You can access the tidy version and pipe it!
+
+```{r tidy, message=FALSE}
 ubigeos_tidy %>%
     filter(lugar == "CHORRILLOS", nivel == "Distrito")
 ```

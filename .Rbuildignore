@@ -5,3 +5,6 @@
 ^ubigeosperu.*\.tar\.gz$
 ^ubigeosperu.*\.tgz$
 ^README\.Rmd$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
